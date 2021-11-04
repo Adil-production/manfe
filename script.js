@@ -136,6 +136,7 @@ document.getElementById("ok2").addEventListener("click" , function(){
     } else {
         document.getElementById("2").style.display = "none"
         document.getElementById("ref").style.display = "block"
+        document.getElementById("ref1").style.display = "none"
         document.getElementById("3").style.display = "block"
         document.getElementById("return").style.display = "block"
         localStorage.setItem("car-tax" , document.getElementById("car-tax-in").value)
