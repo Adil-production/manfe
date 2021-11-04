@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <title>financial management</title>
+</head>
+<body onload="get()">
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title><img src="logo.png" width="150px" style="padding: 5px;"></ion-title>
+                <ion-icon name="arrow-back-sharp" slot="start" id="ref" style="font-size: 20px; margin-left: 10px; display: none;"></ion-icon> 
+                <ion-icon name="arrow-back-sharp" slot="start" id="ref1" style="font-size: 20px; margin-left: 10px; display: none;"></ion-icon> 
+             </ion-toolbar>
+        </ion-header>
+        <ion-content>
+           <br>
+           <br>
+           <div id="0" align="center">
+                <div align="left">
+                    <h3 style="margin: 20px;"><strong>Welcome to <br> Financial management</strong></h3>
+                </div>
+                <ion-card button id="return" style="display: none; width: 187px;">
+                    <br>
+                    <ion-icon name="stats-chart-outline" style="font-size: 70px; "></ion-icon>
+                    <ion-card-header>
+                        <ion-card-title>Dahsboard</ion-card-title>
+                    </ion-card-header>
+                </ion-card>
+                <ion-card button id="add" style="display: inline-block; width: 187px;">
+                    <br>
+                    <ion-icon name="add-outline" style="font-size: 70px;"></ion-icon>
+                    <ion-card-header>
+                        <ion-card-title>Add</ion-card-title>
+                    </ion-card-header>
+                </ion-card>
+           </div>
+           <div id="1" style="display: none;">
+                <ion-item>
+                    <ion-label position="floating">Your budget</ion-label>
+                    <ion-input type="number" placeholder="with Moroccan Dirham" id="budget" min="0"></ion-input>
+                </ion-item>
+                <br>
+                <div align="center">
+                    <ion-button color="success" id="ok">Ok</ion-button>
+                </div>
+            </div>
+            <div id="2" style="display: none;" align="center">
+                
+                    <ion-button id="reset" style="display: none; width: 50px;"><ion-icon name="refresh"></ion-icon></ion-button>
+                
+                <ion-card>
+                    <br>
+                    <h3>In month</h3>
+                    <br>
+                    <br>
+                    <ion-list id="list">
+                        <ion-item id="car-tax">
+                            <ion-label position="floating">Car tax</ion-label>
+                            <ion-input type="number" id="car-tax-in" min="0" value="0"></ion-input>
+                            <ion-button slot="end" style="transform: translateY(40%);"  id="trash1" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+                        </ion-item>
+                        <ion-item id="water-bill">
+                            <ion-label position="floating">Water bill</ion-label>
+                            <ion-input type="number" id="water-bill-in" min="0" value="0"></ion-input>
+                            <ion-button slot="end" style="transform: translateY(40%);" id="trash2" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+                        </ion-item>
+                        <ion-item id="light-bill">
+                            <ion-label position="floating">Light bill</ion-label>
+                            <ion-input type="number" id="light-bill-in" min="0" value="0"></ion-input>
+                            <ion-button slot="end" style="transform: translateY(40%);" id="trash3" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+                        </ion-item>
+                        <ion-item id="necessary-items">
+                            <ion-label position="floating">Necessary items</ion-label>
+                            <ion-input type="number" id="necessary-items-in" min="0" value="0"></ion-input>
+                            <ion-button slot="end" style="transform: translateY(40%);" id="trash4" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+                        </ion-item>
+                        <ion-item id="others">
+                            <ion-label position="floating">Others</ion-label>
+                            <ion-input type="number" id="others-in" min="0" value="0"></ion-input>
+                            <ion-button slot="end" style="transform: translateY(40%);" id="trash5" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+                        </ion-item>
+                    </ion-list>
+                    <br>
+                    <br>
+                        <ion-button id="ok2">Ok</ion-button>
+                        <ion-button fill="outline" id="back">Back</ion-button>
+                    <br>
+                    <br>
+                </ion-card>
+            </div>
+            <div id="3" align="center" style="display: none;">
+                
+
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title>Budget : <strong id="main-budget"></strong>DH</ion-card-title>
+                    </ion-card-header>
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title>Real Budget : <strong id="real-budget"></strong>DH</ion-card-title>
+                        </ion-card-header>
+                        <h4>Try not to use it unless necessary</h4>
+                    </ion-card>
+                    <div align="left" style="margin: 20px;">
+                        <h2>Bar tax : <strong id="main-car-tax" style="color: red;">50</strong> DH</h2>
+                        <h2>Water bill : <strong id="main-water-bill" style="color: red;"></strong> DH</h2>
+                        <h2>Light bill : <strong id="main-light-bill" style="color: red;"></strong> DH</h2>
+                        <h2>Necessary items : <strong id="main-necessary-items" style="color: red;"></strong> DH</h2>
+                        <h2>Others : <strong id="main-others" style="color: red;"></strong> DH</h2>
+                    </div>
+                </ion-card>
+                <br>
+
+                <ion-card color="danger" style="padding: 5px;">
+                    <ion-card-header>
+                        <ion-card-title>Directions:</ion-card-title>
+                    </ion-card-header>
+                    <h4>Repeact this next month or if you have a fixed salary then always try to keep your <strong id="dire"></strong> DH from your main budget to apply the Financial management</h4>
+                </ion-card>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div id="special-case" align="center" style="display: none;">
+                <ion-card>
+                <h3>The budget is small , The budget should be bigger than 500 Dirham</h3>
+                <br>
+                <br>
+                <ion-button id="sorry" color="danger">Sorry</ion-button>
+                <ion-button fill="outline" color="danger" id="special-btn">I have a special case</ion-button>
+                <br>
+                <br>
+                </ion-card>
+            </div>
+        </ion-content>
+    </ion-app>
+    <script src="script.js"></script>
+</body>
+</html>
