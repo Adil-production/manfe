@@ -231,21 +231,21 @@ function showMovies(movies) {
 
         movieEl.innerHTML = `
         <ion-card>
-        <img src="${image_url}" style="padding:10px; border-radius:10px" />
-        <ion-card-header>
-          <ion-card-title>${title}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          
-        </ion-card-content>
+            <img src="${image_url}" style="padding:10px; border-radius:10px" />
+            <ion-card-header>
+            <ion-card-title>${title}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+            
+            </ion-card-content>
 
-            <ion-label style="margin : 10px; padding:10px;">${published_at} | ${source}</ion-label>
-            <br>
-            <br>
-
-      </ion-card>
+                <ion-label style="margin : 10px; padding:10px;">${published_at}</ion-label>
+                <div align="right">
+                    <ion-label style="margin : 10px; padding:10px;">${source}</ion-label>
+                </div>
+                <br>
+        </ion-card>
       <br>
-      <hr>
             
         `
         main.appendChild(movieEl)
