@@ -49,10 +49,18 @@
                 <div align="center">
                     <ion-button color="success" id="ok">Ok</ion-button>
                 </div>
+                <br>
+                <h2 style="margin: 10px;"><strong>Top financial news:</strong></h2>
+                <br>
+                <div id="main"></div>
             </div>
             <div id="2" style="display: none;" align="center">
-                
-                    <ion-button id="reset" style="display: none; width: 50px;"><ion-icon name="refresh"></ion-icon></ion-button>
+
+                <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="reset">
+                    <ion-fab-button>
+                      <ion-icon name="refresh"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab>
                 
                 <ion-card>
                     <br>
@@ -79,6 +87,11 @@
                             <ion-label position="floating">Necessary items</ion-label>
                             <ion-input type="number" id="necessary-items-in" min="0" value="0"></ion-input>
                             <ion-button slot="end" style="transform: translateY(40%);" id="trash4" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+                        </ion-item>
+                        <ion-item id="investing">
+                            <ion-label position="floating">Investing</ion-label>
+                            <ion-input type="number" id="investing-in" min="0" value="0"></ion-input>
+                            <ion-button slot="end" style="transform: translateY(40%);" id="trash6" color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
                         </ion-item>
                         <ion-item id="others">
                             <ion-label position="floating">Others</ion-label>
@@ -112,6 +125,7 @@
                         <h2>Water bill : <strong id="main-water-bill" style="color: red;"></strong> DH</h2>
                         <h2>Light bill : <strong id="main-light-bill" style="color: red;"></strong> DH</h2>
                         <h2>Necessary items : <strong id="main-necessary-items" style="color: red;"></strong> DH</h2>
+                        <h2>Investing : <strong id="main-investing" style="color: red;"></strong> DH</h2>
                         <h2>Others : <strong id="main-others" style="color: red;"></strong> DH</h2>
                     </div>
                 </ion-card>
