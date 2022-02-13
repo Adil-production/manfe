@@ -24,6 +24,7 @@ document.getElementById("ref1").addEventListener("click" , function(){
     document.getElementById("ref1").style.display = "none"
     document.getElementById("1").style.display = "none"
     document.getElementById("3").style.display = "none"
+    document.getElementById("special-case").style.display = "none"
 })
 document.getElementById("special-btn").addEventListener("click" , function(){
     //special case
@@ -48,7 +49,7 @@ document.getElementById("trash1").addEventListener("click",function(){
         document.getElementById("car-tax").style.display = "none"
         document.getElementById("car-tax-in").value = "0"
         document.getElementById("reset").style.display = "block"
-        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none"){
+        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none" && document.getElementById("investing").style.display == "none"){
             alert("Sorry , you removed all the inputs")
             document.getElementById("reset").click()
         }
@@ -62,7 +63,7 @@ document.getElementById("trash2").addEventListener("click",function(){
         document.getElementById("water-bill").style.display = "none"
         document.getElementById("water-bill-in").value = "0"
         document.getElementById("reset").style.display = "block"
-        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none"){
+        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none" && document.getElementById("investing").style.display == "none"){
             alert("Sorry , you removed all the inputs")
             document.getElementById("reset").click()
         }
@@ -76,7 +77,7 @@ document.getElementById("trash3").addEventListener("click",function(){
         document.getElementById("light-bill").style.display = "none"
         document.getElementById("light-bill-in").value = "0"
         document.getElementById("reset").style.display = "block"
-        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none"){
+        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none" && document.getElementById("investing").style.display == "none"){
             alert("Sorry , you removed all the inputs")
             document.getElementById("reset").click()
         }
@@ -90,7 +91,7 @@ document.getElementById("trash4").addEventListener("click",function(){
         document.getElementById("necessary-items").style.display = "none"
         document.getElementById("necessary-items-in").value = "0"
         document.getElementById("reset").style.display = "block"
-        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none"){
+        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none" && document.getElementById("investing").style.display == "none"){
             alert("Sorry , you removed all the inputs")
             document.getElementById("reset").click()
         }
@@ -104,7 +105,21 @@ document.getElementById("trash5").addEventListener("click",function(){
         document.getElementById("others").style.display = "none"
         document.getElementById("others").value = "0"
         document.getElementById("reset").style.display = "block"
-        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none"){
+        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none" && document.getElementById("investing").style.display == "none"){
+            alert("Sorry , you removed all the inputs")
+            document.getElementById("reset").click()
+        }
+    }else{
+
+    }
+    
+})
+document.getElementById("trash6").addEventListener("click",function(){
+    if(confirm("Are you sure?")){
+        document.getElementById("investing").style.display = "none"
+        document.getElementById("investing").value = "0"
+        document.getElementById("reset").style.display = "block"
+        if(document.getElementById("car-tax").style.display == "none" && document.getElementById("water-bill").style.display == "none" && document.getElementById("light-bill").style.display == "none" && document.getElementById("necessary-items").style.display == "none" && document.getElementById("others").style.display == "none" && document.getElementById("investing").style.display == "none"){
             alert("Sorry , you removed all the inputs")
             document.getElementById("reset").click()
         }
@@ -119,17 +134,18 @@ document.getElementById("reset").addEventListener("click",function(){
     document.getElementById("light-bill").style.display = "block"
     document.getElementById("necessary-items").style.display = "block"
     document.getElementById("others").style.display = "block"
-    document.getElementById("reset").style.display = "none"
+    document.getElementById("investing").style.display = "block"
     document.getElementById("car-tax-in").value = "0"
     document.getElementById("water-bill-in").value = "0"
     document.getElementById("light-bill-in").value = "0"
     document.getElementById("necessary-items-in").value = "0"
     document.getElementById("others-in").value = "0"
+    document.getElementById("investing-in").value = "0"
 })
 
 document.getElementById("ok2").addEventListener("click" , function(){
-    var condition = Number(document.getElementById("car-tax-in").value + document.getElementById("water-bill-in").value + document.getElementById("light-bill-in").value+document.getElementById("necessary-items-in").value+document.getElementById("others-in").value)
-    if(document.getElementById("car-tax-in").value == "" || document.getElementById("water-bill-in").value == "" || document.getElementById("light-bill-in").value == "" || document.getElementById("necessary-items-in").value == "" || document.getElementById("others-in").value == ""){
+
+    if(document.getElementById("car-tax-in").value == "" || document.getElementById("water-bill-in").value == "" || document.getElementById("light-bill-in").value == "" || document.getElementById("necessary-items-in").value == "" || document.getElementById("others-in").value == "" || document.getElementById("investing-in").value == ""){
         alert("Sorry something wrong")
     } else if(Number(document.getElementById("car-tax-in").value + document.getElementById("water-bill-in").value + document.getElementById("light-bill-in").value+document.getElementById("necessary-items-in").value+document.getElementById("others-in").value) == 0){
         alert("Sorry , all your inputs is 0")
@@ -144,6 +160,7 @@ document.getElementById("ok2").addEventListener("click" , function(){
         localStorage.setItem("light-bill" , document.getElementById("light-bill-in").value)
         localStorage.setItem("necessary-items" , document.getElementById("necessary-items-in").value)
         localStorage.setItem("others" , document.getElementById("others-in").value)
+        localStorage.setItem("investing" , document.getElementById("investing-in").value)
         localStorage.setItem("budget" , document.getElementById("budget").value)
         localStorage.setItem("done" , "done")
         document.getElementById("main-budget").innerHTML = localStorage.getItem("budget")
@@ -152,7 +169,8 @@ document.getElementById("ok2").addEventListener("click" , function(){
         document.getElementById("main-light-bill").innerHTML = localStorage.getItem("light-bill")
         document.getElementById("main-necessary-items").innerHTML = localStorage.getItem("necessary-items")
         document.getElementById("main-others").innerHTML = localStorage.getItem("others")
-        document.getElementById("real-budget").innerHTML = Number(localStorage.getItem("budget") - localStorage.getItem("car-tax") - localStorage.getItem("water-bill") - localStorage.getItem("light-bill") - localStorage.getItem("necessary-items") - localStorage.getItem("others"))
+        document.getElementById("main-investing").innerHTML = localStorage.getItem("investing")
+        document.getElementById("real-budget").innerHTML = Number(localStorage.getItem("budget") - localStorage.getItem("car-tax") - localStorage.getItem("water-bill") - localStorage.getItem("light-bill") - localStorage.getItem("necessary-items") - localStorage.getItem("others") - localStorage.getItem("investing"))
         document.getElementById("dire").innerHTML = document.getElementById("real-budget").innerHTML
     }
 })
@@ -166,7 +184,8 @@ function get(){
         document.getElementById("main-light-bill").innerHTML = localStorage.getItem("light-bill")
         document.getElementById("main-necessary-items").innerHTML = localStorage.getItem("necessary-items")
         document.getElementById("main-others").innerHTML = localStorage.getItem("others")
-        document.getElementById("real-budget").innerHTML = Number(localStorage.getItem("budget") - localStorage.getItem("car-tax") - localStorage.getItem("water-bill") - localStorage.getItem("light-bill") - localStorage.getItem("necessary-items") - localStorage.getItem("others"))
+        document.getElementById("main-investing").innerHTML = localStorage.getItem("investing")
+        document.getElementById("real-budget").innerHTML = Number(localStorage.getItem("budget") - localStorage.getItem("car-tax") - localStorage.getItem("water-bill") - localStorage.getItem("light-bill") - localStorage.getItem("necessary-items") - localStorage.getItem("others") - localStorage.getItem("investing"))
         document.getElementById("dire").innerHTML = document.getElementById("real-budget").innerHTML
     } 
 }
@@ -187,3 +206,48 @@ document.getElementById("return").addEventListener("click" , function(){
     document.getElementById("3").style.display = "block";
 })
 
+const API_URL = 'https://api.marketaux.com/v1/news/all?symbols=TSLA%2CAMZN%2CMSFT&filter_entities=true&language=en&api_token=Kf1IEg8dvUHtPUHBqd4j1Ie1rYtfcF6QSxu66VAF'
+const main = document.getElementById('main')
+
+
+// Get initial movies
+getMovies(API_URL)
+
+async function getMovies(url) {
+    const res = await fetch(url)
+    const data = await res.json()
+    showMovies(data.data)
+    console.log(data)
+}
+
+function showMovies(movies) {
+    main.innerHTML = ''
+
+    movies.forEach((movie) => {
+        const { title , image_url , published_at , source } = movie
+
+        const movieEl = document.createElement('div')
+        movieEl.classList.add('movie')
+
+        movieEl.innerHTML = `
+        <ion-card>
+        <img src="${image_url}" style="padding:10px; border-radius:10px" />
+        <ion-card-header>
+          <ion-card-title>${title}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          
+        </ion-card-content>
+
+            <ion-label style="margin : 10px; padding:10px;">${published_at} | ${source}</ion-label>
+            <br>
+            <br>
+
+      </ion-card>
+      <br>
+      <hr>
+            
+        `
+        main.appendChild(movieEl)
+    })
+}
